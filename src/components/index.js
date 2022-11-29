@@ -1,4 +1,4 @@
 export * from "../layouts";
 export * from "./modal";
-export * from "./slider";
+export * from "./movie-list";
 export * from "./button";

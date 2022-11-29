@@ -18,7 +18,11 @@ export function Header() {
     >
       <nav className="header-nav px-5 py-5 text-xl flex items-center md:justify-between justify-center md:w-10/11">
         <a href="/" className="fixed top-0 md:static md:top-auto md:mt-0 mt-5">
-          <h1 className="text-xl font-bold uppercase lg:text-3xl md:text-2xl text-white">
+          <h1
+            className={`text-xl font-bold uppercase lg:text-3xl md:text-2xl text-white ${
+              navbar ? "md:inline-flex hidden" : ""
+            }`}
+          >
             reju bagibagi dotcom
           </h1>
         </a>
