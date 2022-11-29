@@ -15,3 +15,19 @@ You can learn more about the rationale behind the project in the Why Vite sectio
 ## Learning Viteja
 
 [documentation](https://vitejs.dev/)
+
+## setup
+
+Install depedencies:
+
+```sh
+npm install
+```
+
+Run development server:
+
+```sh
+npm run dev
+```
+
+Then open `localhost:5173` on your Browser
