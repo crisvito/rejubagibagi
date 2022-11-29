@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  html,
+  body {
+    font-family: "Poppins", sans-serif;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}
+@layer components {
+  .header-nav .nav-menu li {
+    @apply uppercase font-medium text-white;
+  }
+
+  .header-nav .nav-menu .active {
+    @apply text-red-600 font-bold;
+  }
+
+  .modal {
+    @apply translate-y-full opacity-0 z-50 ease-out duration-700 fixed inset-0 flex;
+  }
+  .modal-active {
+    @apply self-center justify-self-center opacity-100 translate-y-0;
+  }
+}
