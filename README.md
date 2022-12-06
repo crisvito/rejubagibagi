@@ -12,7 +12,7 @@ Vite is opinionated and comes with sensible defaults out of the box, but is also
 You can learn more about the rationale behind the project in the Why Vite section.
 
 
-## Learning Viteja
+## Learning Vitejs
 
 [documentation](https://vitejs.dev/)
 
