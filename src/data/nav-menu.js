@@ -5,10 +5,10 @@ export const NavMenu = [
   },
   {
     display: "Movies",
-    path: "/movie",
+    path: "/movies",
   },
   {
     display: "Tv Series",
-    path: "/tv",
+    path: "/tvseries",
   },
 ];

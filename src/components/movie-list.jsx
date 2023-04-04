@@ -1,9 +1,10 @@
 import "swiper/css/navigation";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { category as cate } from "../config";
 import { apiConfig, tmdbApi } from "../api";
 import { useEffect, useState } from "react";
+import { Card } from ".";
+import { category } from "../config";
 
 export function MovieList(props) {
   let response = null;
@@ -13,10 +14,11 @@ export function MovieList(props) {
   useEffect(() => {
     async function getList() {
       if (props.type !== "similar") {
-        if (props.cate === cate.movie) {
-          response = await tmdbApi.getList(props.cate, props.type);
-        } else {
-          response = await tmdbApi.getList(props.cate, props.type);
+        if (props.cate === category.movie) {
+          response = await tmdbApi.getMovie(props.cate, props.type);
+        }
+        if (props.cate === category.tv) {
+          response = await tmdbApi.getTv(props.cate, props.type);
         }
       } else {
         response = await tmdbApi.similar(props.cate, props.id);
@@ -37,9 +39,10 @@ export function MovieList(props) {
               className="lg:w-[15%] md:w-[30%] w-[40%]"
               key={item.id}
             >
-              <img
+              <Card
                 src={apiConfig.w500Image(item.poster_path)}
                 alt={item.title}
+                id={item.id}
               />
             </SwiperSlide>
           );

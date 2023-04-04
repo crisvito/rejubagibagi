@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { OutlineButton } from "../../components";
 import { MovieList } from "../../components";
 
-export function HomeList(props) {
+export function DataList(props) {
   return (
     <div className="w-11/12">
       <div className="flex justify-between py-5 mt-2">

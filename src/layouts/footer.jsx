@@ -5,7 +5,7 @@ import { FooterMenu } from "../data";
 export function Footer() {
   return (
     <div className="flex justify-center bg-slate-500">
-      <div className="w-11/12 flex lg:flex-row flex-col lg:gap-20 gap-10 py-20 text-white">
+      <div className="w-11/12 flex lg:flex-row flex-col lg:gap-20 gap-10 py-10 text-white">
         <h1 className="lg:text-start text-center font-bold lg:text-3xl md:text-xl text-lg">
           LOGO REJUBAGIBAGI.COM
         </h1>

@@ -4,18 +4,13 @@ import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { movieType, category } from "../../config";
+import { category } from "../../config";
 import { ListFetch } from "../../hooks";
 import { Button, OutlineButton, Modal } from "../../components";
 import { apiConfig, tmdbApi } from "../../api";
 
-export function HomeSlider() {
-  const params = { page: 4 };
-  const { data, error, isPending } = ListFetch(
-    category.movie,
-    movieType.popular,
-    params
-  );
+export function DataSlider({ cate, type, params = { page: 1 } }) {
+  const { data, error, isPending } = ListFetch(cate, type, params);
   return (
     <div className="bg-slate-800">
       {error && <span>{error}</span>}

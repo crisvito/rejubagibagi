@@ -6,6 +6,14 @@ export const tmdbApi = {
     const url = category[cate] + "/" + movieType[type];
     return axiosClient.get(url, params);
   },
+  getMovie: (cate, type, params) => {
+    const url = category[cate] + "/" + movieType[type];
+    return axiosClient.get(url, params);
+  },
+  getTv: (cate, type, params) => {
+    const url = category[cate] + "/" + tvType[type];
+    return axiosClient.get(url, params);
+  },
   getVideos: (cate, id) => {
     const url = category[cate] + "/" + id + "/videos";
     return axiosClient.get(url, { params: {} });
